@@ -1,0 +1,47 @@
+{
+  "name": "Github Issue Manager",
+  "version": "0.0.0",
+  "manifest_version":2,
+  "description": "A Chrome extension for Github, allowing quick viewing and navigation to your repos, viewing your issues and creating new issues!",
+  "browser_action": {
+    "default_title": "Github",
+    "default_popup": "popup.html",
+    "default_icon": "assets/images/octocat_16.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/robots.txt*"
+        ],
+      "js": ["libs/oauth2/oauth2_inject.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "homepage_url": "https://github.com/RUPOJS/Github-Issue-Manager",
+  "background": {
+    "scripts" : []
+  },
+  "permissions": [
+    "alarms",
+    "storage",
+    "notifications",
+    "https://github.com/login/oauth/access_token",
+    "https://api.github.com/*"
+    ],
+  "web_accessible_resources": [
+    "assets/notification_icon_48.png",
+    "assets/images/octocat_16.png",
+    "assets/images/octocat_48.png",
+    "assets/images/octocat_128.png",
+    "assets/fonts/github-icons.eot",
+    "assets/fonts/github-icons.svg",
+    "assets/fonts/github-icons.ttf",
+    "assets/fonts/github-icons.woff"
+  ],
+  "icons": {
+    "16": "assets/images/octocat_16.png",
+    "48": "assets/images/octocat_48.png",
+    "128": "assets/images/octocat_128.png"
+   }
+}
