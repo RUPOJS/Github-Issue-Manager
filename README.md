@@ -1,9 +1,9 @@
-
 **Github Issue Manager:**
 
 A Chrome extension for Github, allowing quick viewing and navigation to your repos, viewing your issues and creating new issues.
 
-Install:
+Install & Explore:
+
  -> Clone this repo.
 
  -> Goto chrome://extensions
